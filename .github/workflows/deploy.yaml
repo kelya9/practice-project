@@ -22,6 +22,14 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
+  deploy:
+    name: deploy app
+    runs-on: ubuntu-latest
+    needs: run-linters
+    steps:
+        - name: deploy script
+          run: echo "deployment is complete"
+    
 
           
       
