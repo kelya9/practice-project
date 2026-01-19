@@ -1,29 +1,29 @@
-name: Lint,test and deploy
-on: push
-jobs:
-  run-linters:
-    name: Run linters
-    runs-on: ubuntu-latest
+# name: Lint,test and deploy
+# on: push
+# jobs:
+#   run-linters:
+#     name: Run linters
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Check out Git repository
+#         uses: actions/checkout@v4
 
-      - name: Install Node.js dependencies
-        run: npm ci
+#       - name: Install Node.js dependencies
+#         run: npm ci
 
-      - name: run test
-        run: npm run test
+#       - name: run test
+#         run: npm run test
 
-      - name: build
-        run: npm run build
-  deploy:
-    name: deploy app
-    runs-on: ubuntu-latest
-    needs: run-linters
-    steps:
-        - name: deploy script
-          run: echo "deployment is complete"
+#       - name: build
+#         run: npm run build
+#   deploy:
+#     name: deploy app
+#     runs-on: ubuntu-latest
+#     needs: run-linters
+#     steps:
+#         - name: deploy script
+#           run: echo "deployment is complete"
     
 
           
