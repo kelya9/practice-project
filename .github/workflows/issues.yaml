@@ -7,4 +7,4 @@ jobs:
 
         steps:
          - name: output event log
-           run: echo "${{github.event}}"
+           run: echo "${{ toJson(github.event) }}"
