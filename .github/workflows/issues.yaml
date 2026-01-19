@@ -1,5 +1,5 @@
 name: issues workflow
-on: issues
+on: issue_comment
 jobs:
     output-info:
         name: output details
